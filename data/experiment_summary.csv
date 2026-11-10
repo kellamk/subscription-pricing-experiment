@@ -1,0 +1,7 @@
+variant,channel,visitors,conversions,retained,total_cents,squared_cents
+Control,Organic,8000,1533,1056,4412113,14246020497
+Control,Paid Search,7000,1056,709,3027506,9761600910
+Control,Referral,5000,1134,790,3319212,10797962106
+Treatment,Organic,8000,1425,921,5042660,20125459932
+Treatment,Paid Search,7000,943,600,3337128,13301950144
+Treatment,Referral,5000,1020,696,3736082,15148240278

@@ -1,0 +1,8 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.0.0/schema.json",
+  "name": "a5d3a4a0078e40e29001",
+  "displayName": "Pricing experiment | $29 vs $32",
+  "displayOption": "FitToPage",
+  "width": 1280,
+  "height": 720
+}

@@ -1,0 +1,129 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.0.0/schema.json",
+  "name": "00000000000000000004",
+  "position": {
+    "x": 24,
+    "y": 368,
+    "width": 1232,
+    "height": 328,
+    "z": 1004,
+    "tabOrder": 1004
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Experiment"
+                    }
+                  },
+                  "Property": "channel"
+                }
+              },
+              "queryRef": "Experiment.channel",
+              "nativeQueryRef": "channel"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Experiment"
+                    }
+                  },
+                  "Property": "variant"
+                }
+              },
+              "queryRef": "Experiment.variant",
+              "nativeQueryRef": "variant"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Experiment"
+                    }
+                  },
+                  "Property": "Visitors"
+                }
+              },
+              "queryRef": "Experiment.Visitors",
+              "nativeQueryRef": "Visitors"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Experiment"
+                    }
+                  },
+                  "Property": "Conversion rate"
+                }
+              },
+              "queryRef": "Experiment.Conversion rate",
+              "nativeQueryRef": "Conversion rate"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Experiment"
+                    }
+                  },
+                  "Property": "90-day retained per visitor"
+                }
+              },
+              "queryRef": "Experiment.90-day retained per visitor",
+              "nativeQueryRef": "90-day retained per visitor"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Experiment"
+                    }
+                  },
+                  "Property": "Contribution per visitor"
+                }
+              },
+              "queryRef": "Experiment.Contribution per visitor",
+              "nativeQueryRef": "Contribution per visitor"
+            }
+          ]
+        }
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Performance by channel and experiment arm'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}
