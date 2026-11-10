@@ -4,6 +4,12 @@ Would increasing a monthly subscription from **$29 to $32** improve 90-day contr
 
 This case study simulates a randomized A/B test with **40,000 synthetic visitors** across organic, paid search, and referral channels. It uses SQL to build the analysis and Python to estimate effects, quantify uncertainty, and generate the Power BI report inputs.
 
+## Dashboard preview
+
+[![Power BI dashboard comparing conversion, 90-day retention, and contribution per visitor, with results by channel and experiment arm](reports/power-bi-dashboard.png)](reports/power-bi-dashboard.png)
+
+Click the screenshot to view the channel breakdown at full size.
+
 ## Results at a glance
 
 | Metric | $29 control | $32 treatment | Treatment minus control |
