@@ -51,11 +51,11 @@
                       "Entity": "Experiment"
                     }
                   },
-                  "Property": "Visitors"
+                  "Property": "Assigned visitors"
                 }
               },
-              "queryRef": "Experiment.Visitors",
-              "nativeQueryRef": "Visitors"
+              "queryRef": "Experiment.Assigned visitors",
+              "nativeQueryRef": "Assigned visitors"
             },
             {
               "field": {

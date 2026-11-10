@@ -53,23 +53,23 @@
         ],
         "measures": [
           {
-            "name": "Visitors",
+            "name": "Assigned visitors",
             "expression": "SUM(Experiment[visitors])",
             "formatString": "#,0"
           },
           {
             "name": "Conversion rate",
-            "expression": "DIVIDE(SUM(Experiment[conversions]), [Visitors])",
+            "expression": "DIVIDE(SUM(Experiment[conversions]), [Assigned visitors])",
             "formatString": "0.00%"
           },
           {
             "name": "90-day retained per visitor",
-            "expression": "DIVIDE(SUM(Experiment[retained]), [Visitors])",
+            "expression": "DIVIDE(SUM(Experiment[retained]), [Assigned visitors])",
             "formatString": "0.00%"
           },
           {
             "name": "Contribution per visitor",
-            "expression": "DIVIDE(SUM(Experiment[total_cents]), 100 * [Visitors])",
+            "expression": "DIVIDE(SUM(Experiment[total_cents]), 100 * [Assigned visitors])",
             "formatString": "$0.00"
           }
         ],

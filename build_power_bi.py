@@ -12,10 +12,10 @@ MODEL = "Pricing Experiment.SemanticModel"
 PAGE = "a5d3a4a0078e40e29001"
 
 MEASURES = {
-    "Visitors": ("SUM(Experiment[visitors])", "#,0"),
-    "Conversion rate": ("DIVIDE(SUM(Experiment[conversions]), [Visitors])", "0.00%"),
-    "90-day retained per visitor": ("DIVIDE(SUM(Experiment[retained]), [Visitors])", "0.00%"),
-    "Contribution per visitor": ("DIVIDE(SUM(Experiment[total_cents]), 100 * [Visitors])", "$0.00"),
+    "Assigned visitors": ("SUM(Experiment[visitors])", "#,0"),
+    "Conversion rate": ("DIVIDE(SUM(Experiment[conversions]), [Assigned visitors])", "0.00%"),
+    "90-day retained per visitor": ("DIVIDE(SUM(Experiment[retained]), [Assigned visitors])", "0.00%"),
+    "Contribution per visitor": ("DIVIDE(SUM(Experiment[total_cents]), 100 * [Assigned visitors])", "$0.00"),
 }
 
 
