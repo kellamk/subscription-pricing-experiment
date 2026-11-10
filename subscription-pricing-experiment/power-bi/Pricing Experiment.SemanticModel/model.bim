@@ -1,0 +1,98 @@
+{
+  "name": "Pricing Experiment",
+  "compatibilityLevel": 1600,
+  "model": {
+    "culture": "en-US",
+    "defaultPowerBIDataSourceVersion": "powerBI_V3",
+    "tables": [
+      {
+        "name": "Experiment",
+        "columns": [
+          {
+            "name": "variant",
+            "sourceColumn": "variant",
+            "summarizeBy": "none",
+            "dataType": "string",
+            "isHidden": false
+          },
+          {
+            "name": "channel",
+            "sourceColumn": "channel",
+            "summarizeBy": "none",
+            "dataType": "string",
+            "isHidden": false
+          },
+          {
+            "name": "visitors",
+            "sourceColumn": "visitors",
+            "summarizeBy": "none",
+            "dataType": "int64",
+            "isHidden": true
+          },
+          {
+            "name": "conversions",
+            "sourceColumn": "conversions",
+            "summarizeBy": "none",
+            "dataType": "int64",
+            "isHidden": true
+          },
+          {
+            "name": "retained",
+            "sourceColumn": "retained",
+            "summarizeBy": "none",
+            "dataType": "int64",
+            "isHidden": true
+          },
+          {
+            "name": "total_cents",
+            "sourceColumn": "total_cents",
+            "summarizeBy": "none",
+            "dataType": "int64",
+            "isHidden": true
+          }
+        ],
+        "measures": [
+          {
+            "name": "Visitors",
+            "expression": "SUM(Experiment[visitors])",
+            "formatString": "#,0"
+          },
+          {
+            "name": "Conversion rate",
+            "expression": "DIVIDE(SUM(Experiment[conversions]), [Visitors])",
+            "formatString": "0.00%"
+          },
+          {
+            "name": "90-day retained per visitor",
+            "expression": "DIVIDE(SUM(Experiment[retained]), [Visitors])",
+            "formatString": "0.00%"
+          },
+          {
+            "name": "Contribution per visitor",
+            "expression": "DIVIDE(SUM(Experiment[total_cents]), 100 * [Visitors])",
+            "formatString": "$0.00"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Experiment",
+            "mode": "import",
+            "source": {
+              "type": "m",
+              "expression": [
+                "#table(type table [variant = text, channel = text, visitors = Int64.Type, conversions = Int64.Type, retained = Int64.Type, total_cents = Int64.Type], {",
+                "    {\"Control\", \"Organic\", 8000, 1533, 1056, 4412113},",
+                "    {\"Control\", \"Paid Search\", 7000, 1056, 709, 3027506},",
+                "    {\"Control\", \"Referral\", 5000, 1134, 790, 3319212},",
+                "    {\"Treatment\", \"Organic\", 8000, 1425, 921, 5042660},",
+                "    {\"Treatment\", \"Paid Search\", 7000, 943, 600, 3337128},",
+                "    {\"Treatment\", \"Referral\", 5000, 1020, 696, 3736082}",
+                "})"
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  }
+}
